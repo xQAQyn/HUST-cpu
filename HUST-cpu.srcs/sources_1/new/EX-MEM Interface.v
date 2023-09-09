@@ -39,6 +39,7 @@ module EX_MEM_Interface(
         MEM_RegWrite <= 1'b0;
         MEM_WR <= 5'b0;
         MEM_Load <= 1'b0;
+        MEM_Lhu <= 1'b0;
     end
 
     always @(posedge clk) begin
@@ -53,6 +54,7 @@ module EX_MEM_Interface(
             MEM_RegWrite <= 1'b0;
             MEM_WR <= 5'b0;
             MEM_Load <= 1'b0;
+            MEM_Lhu <= 1'b0;
         end
         else begin
             MEM_PC <= EX_PC;
@@ -65,6 +67,7 @@ module EX_MEM_Interface(
             MEM_RegWrite <= EX_RegWrite;
             MEM_WR <= EX_WR;
             MEM_Load <= EX_Load;
+            MEM_Lhu <= EX_Lhu;
         end
     end
 endmodule

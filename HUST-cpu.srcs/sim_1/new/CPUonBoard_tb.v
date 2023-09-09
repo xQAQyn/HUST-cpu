@@ -28,7 +28,6 @@ module CPUonBoard_tb();
         .CF(CF),
         .CG(CG),
         .DP(DP),
-        .LED(LED),
-        .clk_CPU(CPUclk)
+        .LED(LED)
     );
 endmodule

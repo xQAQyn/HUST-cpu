@@ -43,27 +43,16 @@ module PipelineCPU(
     wire WB_Jtype, WB_MemToReg, WB_RegWrite, WB_Lui, WB_Lhu;
     wire [4:0] WB_WR;
     
-//    reg [31:0] clk_cnt;
-//    initial begin
-//        clk_cnt = 0;
-//    end
-//    always @(posedge clk) begin
-//        $display("\nClock %h:", clk_cnt);
-//        $display(IF_PC, IF_IR);
-//        $display(ID_PC, ID_IR);
-//        $display(EX_PC, EX_IR);
-//        $display(MEM_PC, MEM_IR);
-//        $display(WB_PC, WB_IR);
-//        clk_cnt = clk_cnt + 1;
-//    end
-    
 // IF Implement
     initial begin
         IF_PC <= 0;
         EPC <= 0;
     end
-    always @(posedge clk) begin
-        if(halt || ID_LoadUse) begin
+    always @(posedge clk or posedge rst) begin
+        if(rst) begin
+            IF_PC <= 0;
+        end
+        else if(halt || ID_LoadUse) begin
             IF_PC <= IF_PC;
             $display("PC:halted at %h", IF_PC);
         end
@@ -82,6 +71,7 @@ module PipelineCPU(
     );
     
 // IF/ID interface
+    assign IF_ID_rst = JumpToBranch || rst;
     IF_ID_Interface IF_ID(
       .IF_PC(IF_PC),
       .IF_IR(IF_IR),
@@ -90,7 +80,7 @@ module PipelineCPU(
       .stall(!ID_LoadUse),
       .clk(clk),
       .pause(ID_pause),
-      .rst(JumpToBranch)
+      .rst(IF_ID_rst)
     );
 
 // ID Implement
@@ -148,7 +138,7 @@ module PipelineCPU(
 
 // ID/EX interface
     wire EX_rst;
-    assign EX_rst = ID_pause || JumpToBranch;
+    assign EX_rst = ID_pause || JumpToBranch || rst;
     ID_EX_Interface ID_EX(
         .ID_PC(ID_PC),
         .ID_IR(ID_IR),
@@ -265,17 +255,20 @@ module PipelineCPU(
     );
     
     //handle ecall
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk or posedge rst or posedge Go) begin
         if(rst) begin
             halt <= 1'b0;
             LEDInfo <= 32'b0;
+        end
+        else if(Go) begin
+            halt <= 1'b0;
         end
         else if(EX_ecall && EX_equal) begin
             LEDInfo <= EX_R2;
         end
         else if(EX_ecall && !EX_equal) begin
             halt <= 1'b1;
-            LEDInfo <= {EX_R1Control, 2'b0, EX_R2Control};//for debug
+//            LEDInfo <= {EX_R1Control, 2'b0, EX_R2Control};//for debug
         end
     end
     

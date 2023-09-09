@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache C:/Users/12296/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4256-DESKTOP-8RKC9IR/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/.Xil/Vivado-27400-DESKTOP-8RKC9IR/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -93,6 +93,7 @@ read_mem {
   C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/risc-v-int.mem
   C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/risc-v-benchmark.mem
   C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/risc-v-benchmark-ccab.mem
+  C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/LHU.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/ALU.v

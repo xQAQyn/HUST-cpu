@@ -179,11 +179,17 @@ module SingleCycleCPU(
         else if(IntOff)
             IntE <= 1;
     end
+    reg IntCLR;
+    always @(posedge clk) begin
+        if(Int == 1'b1)
+            IntCLR <= 1;
+        else IntCLR <= 0;
+    end
     IntController IntControl(
         .IR1(IR1),
         .IR2(IR2),
         .IR3(IR3),
-        .CLR(IntOff),
+        .CLR(IntCLR),
         .clk(clk),
         .rst(rst),
         .W1(W1),

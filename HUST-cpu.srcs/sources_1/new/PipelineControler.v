@@ -89,7 +89,7 @@ module PipelineControler(
     always @(*) begin
         if( EX_Conf_R1 == 1'b0 && MEM_Conf_R1 == 1'b0)
             R1Control <= 2'h0;
-        else if( EX_Conf_R1 == 1'b1 && EX_Load == 1'b1)
+        else if( EX_Conf_R1 == 1'b1 && EX_Load == 1'b0)
             R1Control <= 2'h1;
         else if( EX_Conf_R1 == 1'b0 &&  MEM_Conf_R1 == 1'b1 && MEM_Load == 1'b0)
             R1Control <= 2'h2;
@@ -98,12 +98,18 @@ module PipelineControler(
             
         if( EX_Conf_R2 == 1'b0 && MEM_Conf_R2 == 1'b0)
             R2Control <= 2'h0;
-        else if( EX_Conf_R2 == 1'b1 && EX_Load == 1'b1)
+        else if( EX_Conf_R2 == 1'b1 && EX_Load == 1'b0)
             R2Control <= 2'h1;
         else if( EX_Conf_R2 == 1'b0 &&  MEM_Conf_R2 == 1'b1 && MEM_Load == 1'b0)
             R2Control <= 2'h2;
         else
             R2Control <= 2'h3;;
+            
+        if(ecall) begin
+            $display("Controler in ecall:");
+            $display("EX Conflict:(%h,%h), EX Load:%h", EX_Conf_R1, EX_Conf_R2, EX_Load);
+            $display("MEM Conflict:(%h,%h), MEM Load:%h", MEM_Conf_R1, MEM_Conf_R2, MEM_Load);
+        end
     end
     
 endmodule

@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep  9 17:03:17 2023
+# Process ID: 17604
+# Current directory: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24452 C:\Users\12296\OneDrive\SelfLearning\Verilog\project\HUST-cpu\HUST-cpu.xpr
+# Log file: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/vivado.log
+# Journal file: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.xpr
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top IntController [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+synth_design -rtl -rtl_skip_mlo -name rtl_1

@@ -20,7 +20,7 @@ module SCCPUonBoard(
 //    output wire [31:0] LEDInfo
 );
     wire [31:0] LEDInfo;
-    parameter clk_control = 2000000;
+    parameter clk_control = 5000000;
     wire clk_Display, clk_CPU, clk_Test;
     ClockDevide #(clk_control) getClk( //#1000000 100Hz
         .CLK100MHZ(CLK100MHZ),

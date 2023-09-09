@@ -20,7 +20,7 @@ module PipelineCPUonBoard(
 );
     wire clk_CPU;
     wire [31:0] LEDInfo;
-    parameter clk_control = 10000000;
+    parameter clk_control = 2000000;
     wire clk_Display, clk_Test;
     ClockDevide #(clk_control) getClk( //#1000000 100Hz
         .CLK100MHZ(CLK100MHZ),

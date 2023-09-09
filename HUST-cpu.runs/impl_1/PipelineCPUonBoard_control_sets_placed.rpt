@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Sep  9 02:45:08 2023
+| Date         : Sun Sep 10 02:40:35 2023
 | Host         : DESKTOP-8RKC9IR running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file PipelineCPUonBoard_control_sets_placed.rpt
 | Design       : PipelineCPUonBoard
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    42 |
-|    Minimum number of control sets                        |    42 |
+| Total control sets                                       |    43 |
+|    Minimum number of control sets                        |    43 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    23 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    42 |
-| >= 0 to < 4        |     2 |
+| Total control sets |    43 |
+| >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
@@ -58,63 +58,64 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              37 |           17 |
+| No           | No                    | No                     |              37 |           14 |
 | No           | No                    | Yes                    |               1 |            1 |
-| No           | Yes                   | No                     |             423 |          199 |
-| Yes          | No                    | No                     |              32 |           13 |
-| Yes          | No                    | Yes                    |            1024 |          525 |
-| Yes          | Yes                   | No                     |              60 |           41 |
+| No           | Yes                   | No                     |             425 |          165 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1056 |          779 |
+| Yes          | Yes                   | No                     |              61 |           36 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+----------------------------------+------------------------------+------------------+----------------+--------------+
-|     Clock Signal     |           Enable Signal          |       Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------------+----------------------------------+------------------------------+------------------+----------------+--------------+
-|  CLK100MHZ_IBUF_BUFG |                                  |                              |                2 |              2 |         1.00 |
-|  getDisplayClk/CLK   |                                  |                              |                1 |              3 |         3.00 |
-|  n_0_1694_BUFG       |                                  |                              |               14 |             32 |         2.29 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/E[0]                  | BTND_IBUF                    |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG |                                  | getClk/clear                 |                8 |             32 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG |                                  | getDisplayClk/cnt[0]_i_1_n_1 |                8 |             32 |         4.00 |
-|  clk_CPU_BUFG        | CPU/ID_EX/E[0]                   | BTND_IBUF                    |               10 |             32 |         3.20 |
-|  clk_CPU_BUFG        | CPU/ID_EX/EX_Load_reg_1[0]       |                              |               13 |             32 |         2.46 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_11[0] | BTND_IBUF                    |               17 |             32 |         1.88 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_12[0] | BTND_IBUF                    |               15 |             32 |         2.13 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_15[0] | BTND_IBUF                    |               16 |             32 |         2.00 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_16[0] | BTND_IBUF                    |               18 |             32 |         1.78 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_17[0] | BTND_IBUF                    |               13 |             32 |         2.46 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_18[0] | BTND_IBUF                    |               15 |             32 |         2.13 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_19[0] | BTND_IBUF                    |               17 |             32 |         1.88 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_1[0]  | BTND_IBUF                    |               17 |             32 |         1.88 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_2[0]  | BTND_IBUF                    |               15 |             32 |         2.13 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_20[0] | BTND_IBUF                    |               13 |             32 |         2.46 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_10[0] | BTND_IBUF                    |               17 |             32 |         1.88 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_21[0] | BTND_IBUF                    |               19 |             32 |         1.68 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_0[0]  | BTND_IBUF                    |               22 |             32 |         1.45 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_13[0] | BTND_IBUF                    |               19 |             32 |         1.68 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_14[0] | BTND_IBUF                    |               18 |             32 |         1.78 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_27[0] | BTND_IBUF                    |               12 |             32 |         2.67 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_4[0]  | BTND_IBUF                    |               14 |             32 |         2.29 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_28[0] | BTND_IBUF                    |               12 |             32 |         2.67 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_5[0]  | BTND_IBUF                    |               14 |             32 |         2.29 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_8[0]  | BTND_IBUF                    |               19 |             32 |         1.68 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_6[0]  | BTND_IBUF                    |               16 |             32 |         2.00 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_26[0] | BTND_IBUF                    |               14 |             32 |         2.29 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_22[0] | BTND_IBUF                    |               20 |             32 |         1.60 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_25[0] | BTND_IBUF                    |               15 |             32 |         2.13 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_3[0]  | BTND_IBUF                    |               16 |             32 |         2.00 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_9[0]  | BTND_IBUF                    |               21 |             32 |         1.52 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_7[0]  | BTND_IBUF                    |               22 |             32 |         1.45 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_24[0] | BTND_IBUF                    |               16 |             32 |         2.00 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_29[0] | BTND_IBUF                    |               16 |             32 |         2.00 |
-| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_23[0] | BTND_IBUF                    |               19 |             32 |         1.68 |
-|  clk_CPU_BUFG        | CPU/ID_EX/EX_Load_reg_0[0]       | CPU/ID_EX/SR[0]              |               41 |             60 |         1.46 |
-|  clk_CPU_BUFG        | CPU/EX_MEM/MEM_MemWrite          |                              |               32 |            128 |         4.00 |
-|  clk_CPU_BUFG        |                                  | CPU/ID_EX/EX_rst             |               70 |            150 |         2.14 |
-|  clk_CPU_BUFG        |                                  | BTND_IBUF                    |              114 |            210 |         1.84 |
-+----------------------+----------------------------------+------------------------------+------------------+----------------+--------------+
++----------------------+----------------------------------+---------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |           Enable Signal          |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+----------------------------------+---------------------------------+------------------+----------------+--------------+
+|  clk_CPU_BUFG        |                                  | CPU/halt_i_2_n_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG |                                  |                                 |                2 |              2 |         1.00 |
+|  getDisplayClk/CLK   |                                  |                                 |                1 |              3 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG |                                  | getClk/clear                    |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                  | getDisplayClk/cnt[0]_i_1__0_n_1 |                8 |             32 |         4.00 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_19[0] | BTND_IBUF                       |               22 |             32 |         1.45 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/E[0]                  | BTND_IBUF                       |               23 |             32 |         1.39 |
+|  clk_CPU_BUFG        | CPU/ID_EX/E[0]                   | BTND_IBUF                       |               11 |             32 |         2.91 |
+|  n_0_2721_BUFG       |                                  |                                 |               11 |             32 |         2.91 |
+|  clk_CPU_BUFG        | CPU/ID_EX/EX_ecall_reg_0[0]      | BTND_IBUF                       |               11 |             32 |         2.91 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_18[0] | BTND_IBUF                       |               25 |             32 |         1.28 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_27[0] | BTND_IBUF                       |               23 |             32 |         1.39 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_22[0] | BTND_IBUF                       |               25 |             32 |         1.28 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_28[0] | BTND_IBUF                       |               25 |             32 |         1.28 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_8[0]  | BTND_IBUF                       |               23 |             32 |         1.39 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_12[0] | BTND_IBUF                       |               22 |             32 |         1.45 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_11[0] | BTND_IBUF                       |               24 |             32 |         1.33 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_13[0] | BTND_IBUF                       |               23 |             32 |         1.39 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_15[0] | BTND_IBUF                       |               25 |             32 |         1.28 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_25[0] | BTND_IBUF                       |               25 |             32 |         1.28 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_5[0]  | BTND_IBUF                       |               26 |             32 |         1.23 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_9[0]  | BTND_IBUF                       |               27 |             32 |         1.19 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_24[0] | BTND_IBUF                       |               24 |             32 |         1.33 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_16[0] | BTND_IBUF                       |               24 |             32 |         1.33 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_2[0]  | BTND_IBUF                       |               25 |             32 |         1.28 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_20[0] | BTND_IBUF                       |               26 |             32 |         1.23 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_23[0] | BTND_IBUF                       |               21 |             32 |         1.52 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_26[0] | BTND_IBUF                       |               22 |             32 |         1.45 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_4[0]  | BTND_IBUF                       |               23 |             32 |         1.39 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_1[0]  | BTND_IBUF                       |               28 |             32 |         1.14 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_17[0] | BTND_IBUF                       |               26 |             32 |         1.23 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_3[0]  | BTND_IBUF                       |               24 |             32 |         1.33 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_29[0] | BTND_IBUF                       |               26 |             32 |         1.23 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_7[0]  | BTND_IBUF                       |               24 |             32 |         1.33 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_0[0]  | BTND_IBUF                       |               26 |             32 |         1.23 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_14[0] | BTND_IBUF                       |               24 |             32 |         1.33 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_10[0] | BTND_IBUF                       |               22 |             32 |         1.45 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_21[0] | BTND_IBUF                       |               27 |             32 |         1.19 |
+| ~clk_CPU_BUFG        | CPU/MEM_WB/WB_RegWrite_reg_6[0]  | BTND_IBUF                       |               27 |             32 |         1.19 |
+|  clk_CPU_BUFG        | CPU/ID_EX/EX_MemToReg_reg_0[0]   | CPU/ID_EX/SR[0]                 |               36 |             61 |         1.69 |
+|  clk_CPU_BUFG        | CPU/EX_MEM/MEM_MemWrite          |                                 |               32 |            128 |         4.00 |
+|  clk_CPU_BUFG        |                                  | CPU/ID_EX/EX_rst                |               67 |            151 |         2.25 |
+|  clk_CPU_BUFG        |                                  | BTND_IBUF                       |               82 |            210 |         2.56 |
++----------------------+----------------------------------+---------------------------------+------------------+----------------+--------------+
 
 

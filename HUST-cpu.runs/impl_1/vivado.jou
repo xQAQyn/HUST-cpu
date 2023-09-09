@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Sep  9 02:44:40 2023
-# Process ID: 55156
+# Start of session at: Sun Sep 10 02:40:08 2023
+# Process ID: 19608
 # Current directory: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.runs/impl_1
 # Command line: vivado.exe -log PipelineCPUonBoard.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PipelineCPUonBoard.tcl -notrace
 # Log file: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.runs/impl_1/PipelineCPUonBoard.vdi

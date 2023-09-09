@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep  6 00:13:27 2023
+# Process ID: 9652
+# Current directory: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.sim/sim_1/impl/timing/xsim/xsim.dir/SCCPUonBoard_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.sim/sim_1/impl/timing/xsim/xsim.dir/SCCPUonBoard_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 116.570 ; gain = 17.637
+INFO: [Common 17-206] Exiting Webtalk at Wed Sep  6 00:13:33 2023...

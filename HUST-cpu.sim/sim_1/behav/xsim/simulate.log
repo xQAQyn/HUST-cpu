@@ -1,0 +1,402 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+WE:0, WR:00, RDin:xxxxxxxx
+IR:         0
+R1:xX, EX_WR:00, EX_RegWrite:0, ReadR1:x, EX Conflict R1: 0
+R2:0X, EX_WR:00, EX_RegWrite:0, ReadR2:x, EX Conflict R2: 0
+R1:xX, MEM_WR:00, MEM_RegWrite:0, ReadR1:x, MEM Conflict R1: 0
+R2:0X, MEM_WR:00, MEM_RegWrite:0, ReadR2:x, MEM Conflict R2: 0
+RDin: from ALU
+
+Clock 00000000:
+         0   1049747
+         0         0
+         0         0
+         0         0
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049747
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:0, EX Conflict R1: 0
+R2:01, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:01, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:00000000
+
+Clock 00000001:
+         4  16777327
+         0   1049747
+         0         0
+         0         0
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:  16777327
+R1:00, EX_WR:09, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:10, EX_WR:09, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:1, MEM Conflict R1: 0
+R2:10, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 00000002:
+         8   1049747
+         4  16777327
+         0   1049747
+         0         0
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049747
+R1:00, EX_WR:00, EX_RegWrite:1, ReadR1:0, EX Conflict R1: 0
+R2:01, EX_WR:00, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:09, MEM_RegWrite:1, ReadR1:0, MEM Conflict R1: 0
+R2:01, MEM_WR:09, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 00000003:
+        12   2099475
+         8   1049747
+         4  16777327
+         0   1049747
+         0         0
+PC:Jump to branch
+LEDInfo:xxxxxxxx
+IR:         0
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 1
+R2:00, MEM_WR:00, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:1, WR:09, RDin:00000001
+
+Clock 00000004:
+        20  16777327
+         0         0
+         0         0
+         4  16777327
+         0   1049747
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:  16777327
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:0, EX Conflict R1: 0
+R2:10, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:10, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from PC+4
+WE:1, WR:00, RDin:00000008
+
+Clock 00000005:
+        24   1049747
+        20  16777327
+         0         0
+         0         0
+         4  16777327
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049747
+R1:00, EX_WR:00, EX_RegWrite:1, ReadR1:0, EX Conflict R1: 0
+R2:01, EX_WR:00, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:01, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:00000000
+
+Clock 00000006:
+        28   2099475
+        24   1049747
+        20  16777327
+         0         0
+         0         0
+PC:Jump to branch
+LEDInfo:xxxxxxxx
+IR:         0
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 1
+R2:00, MEM_WR:00, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 00000007:
+        36  16777327
+         0         0
+         0         0
+        20  16777327
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:  16777327
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:0, EX Conflict R1: 0
+R2:10, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:10, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from PC+4
+WE:1, WR:00, RDin:00000018
+
+Clock 00000008:
+        40   1049747
+        36  16777327
+         0         0
+         0         0
+        20  16777327
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049747
+R1:00, EX_WR:00, EX_RegWrite:1, ReadR1:0, EX Conflict R1: 0
+R2:01, EX_WR:00, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:01, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:00000000
+
+Clock 00000009:
+        44   2099475
+        40   1049747
+        36  16777327
+         0         0
+         0         0
+PC:Jump to branch
+LEDInfo:xxxxxxxx
+IR:         0
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 1
+R2:00, MEM_WR:00, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 0000000a:
+        52  16777327
+         0         0
+         0         0
+        36  16777327
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:  16777327
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:0, EX Conflict R1: 0
+R2:10, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:10, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from PC+4
+WE:1, WR:00, RDin:00000028
+
+Clock 0000000b:
+        56   1049747
+        52  16777327
+         0         0
+         0         0
+        36  16777327
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049747
+R1:00, EX_WR:00, EX_RegWrite:1, ReadR1:0, EX Conflict R1: 0
+R2:01, EX_WR:00, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:01, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:00000000
+
+Clock 0000000c:
+        60   2099475
+        56   1049747
+        52  16777327
+         0         0
+         0         0
+PC:Jump to branch
+LEDInfo:xxxxxxxx
+IR:         0
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 1
+R2:00, MEM_WR:00, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 0000000d:
+        68 700449007
+         0         0
+         0         0
+        52  16777327
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR: 700449007
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:0, EX Conflict R1: 0
+R2:1c, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:1c, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from PC+4
+WE:1, WR:00, RDin:00000038
+
+Clock 0000000e:
+        72   1049619
+        68 700449007
+         0         0
+         0         0
+        52  16777327
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049619
+R1:00, EX_WR:01, EX_RegWrite:1, ReadR1:0, EX Conflict R1: 0
+R2:01, EX_WR:01, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:01, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:00000000
+
+Clock 0000000f:
+        76   1049747
+        72   1049619
+        68 700449007
+         0         0
+         0         0
+PC:Jump to branch
+LEDInfo:xxxxxxxx
+IR:         0
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:01, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:00, MEM_WR:01, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 00000010:
+       736      1043
+         0         0
+         0         0
+        68 700449007
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:      1043
+R1:00, EX_WR:00, EX_RegWrite:0, ReadR1:0, EX Conflict R1: 0
+R2:00, EX_WR:00, EX_RegWrite:0, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:0, MEM Conflict R1: 0
+R2:00, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from PC+4
+WE:1, WR:01, RDin:00000048
+
+Clock 00000011:
+       740   1311763
+       736      1043
+         0         0
+         0         0
+        68 700449007
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1311763
+R1:08, EX_WR:08, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 1
+R2:01, EX_WR:08, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:08, MEM_WR:00, MEM_RegWrite:0, ReadR1:1, MEM Conflict R1: 0
+R2:01, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:00000000
+
+Clock 00000012:
+       744   8389939
+       740   1311763
+       736      1043
+         0         0
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   8389939
+R1:00, EX_WR:08, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 1
+R2:08, EX_WR:08, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:08, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:08, MEM_WR:08, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+WE:0, WR:00, RDin:00000000
+
+Clock 00000013:
+       748  35653779
+       744   8389939
+       740   1311763
+       736      1043
+         0         0
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:  35653779
+R1:00, EX_WR:0a, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:02, EX_WR:0a, EX_RegWrite:1, ReadR2:1, EX Conflict R2: 0
+R1:00, MEM_WR:08, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:02, MEM_WR:08, MEM_RegWrite:1, ReadR2:1, MEM Conflict R2: 1
+RDin: from ALU
+WE:1, WR:08, RDin:00000000
+
+Clock 00000014:
+       752       115
+       748  35653779
+       744   8389939
+       740   1311763
+       736      1043
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:       115
+R1:00, EX_WR:11, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:11, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:0a, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:00, MEM_WR:0a, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:1, WR:08, RDin:xxxxxxxx
+
+Clock 00000015:
+       756   2360339
+       752       115
+       748  35653779
+       744   8389939
+       740   1311763
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   2360339
+R1:11, EX_WR:00, EX_RegWrite:0, ReadR1:1, EX Conflict R1: 0
+R2:0a, EX_WR:00, EX_RegWrite:0, ReadR2:1, EX Conflict R2: 0
+R1:11, MEM_WR:11, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 1
+R2:0a, MEM_WR:11, MEM_RegWrite:1, ReadR2:1, MEM Conflict R2: 0
+RDin: from ALU
+WE:1, WR:0a, RDin:xxxxxxxx
+
+Clock 00000016:
+       760   8389939
+       756   2360339
+       752       115
+       748  35653779
+       744   8389939
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   8389939
+R1:00, EX_WR:08, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:08, EX_WR:08, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:00, MEM_RegWrite:0, ReadR1:1, MEM Conflict R1: 0
+R2:08, MEM_WR:00, MEM_RegWrite:0, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:1, WR:11, RDin:00000022
+
+Clock 00000017:
+       764  35653779
+       760   8389939
+       756   2360339
+       752       115
+       748  35653779
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:  35653779
+R1:00, EX_WR:0a, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:02, EX_WR:0a, EX_RegWrite:1, ReadR2:1, EX Conflict R2: 0
+R1:00, MEM_WR:08, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:02, MEM_WR:08, MEM_RegWrite:1, ReadR2:1, MEM Conflict R2: 0
+RDin: from ALU
+WE:0, WR:00, RDin:000XxxxX
+
+Clock 00000018:
+       768       115
+       764  35653779
+       760   8389939
+       756   2360339
+       752       115
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:       115
+R1:00, EX_WR:11, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:00, EX_WR:11, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:0a, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:00, MEM_WR:0a, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:1, WR:08, RDin:xxxxxxxx

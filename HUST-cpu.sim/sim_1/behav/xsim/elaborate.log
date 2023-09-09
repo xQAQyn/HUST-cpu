@@ -1,0 +1,33 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto bf908ad7c10d4d2e9558d85faaf9ff55 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPUonBoard_tb_behav xil_defaultlib.CPUonBoard_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ClockDevide
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.IF_ID_Interface
+Compiling module xil_defaultlib.PipelineControler
+Compiling module xil_defaultlib.bitExtend(inWidth=12)
+Compiling module xil_defaultlib.bitExtend(inWidth=13)
+Compiling module xil_defaultlib.bitExtend(inWidth=21)
+Compiling module xil_defaultlib.IRToImm
+Compiling module xil_defaultlib.downRegFile
+Compiling module xil_defaultlib.ID_EX_Interface
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_Interface
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.MEM_WB_Interface
+Compiling module xil_defaultlib.PipelineCPU
+Compiling module xil_defaultlib.Decoder3_8
+Compiling module xil_defaultlib.getKBit
+Compiling module xil_defaultlib.Pattern
+Compiling module xil_defaultlib.LEDDisplay_32bit
+Compiling module xil_defaultlib.PipelineCPUonBoard(clk_control=1...
+Compiling module xil_defaultlib.CPUonBoard_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPUonBoard_tb_behav

@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"SCCPUonBoard_tb_time_impl.v" \
+"../../../../../HUST-cpu.srcs/sim_1/new/SCCPUonBoard_tb.v" \
+"../../../../../HUST-cpu.srcs/sim_1/new/ClockDevide_tb.v" \
+
+# Do not sort compile order
+nosort

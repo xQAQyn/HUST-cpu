@@ -1,0 +1,57 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/IRToImm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IRToImm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/RegFile.v:18]
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/RegFile.v:19]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/SingleCycleControler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleCycleControler
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/SingleCycleCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleCycleCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/IntController.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IntController
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/SCCPUonBoard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCCPUonBoard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/ClockDevide.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDevide
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/bitExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bitExtend
+WARNING: [VRFC 10-3380] identifier 'inWidth' is used before its declaration [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/bitExtend.v:4]
+WARNING: [VRFC 10-3380] identifier 'outWidth' is used before its declaration [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/bitExtend.v:5]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/LEDDisplay_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LEDDisplay_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/Decoder3_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder3_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/getKBit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module getKBit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/Pattern.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pattern
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/downRegfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module downRegFile
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/downRegfile.v:18]
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/downRegfile.v:19]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/PipelineControler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PipelineControler
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/PipelineControler.v:89]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/PipelineCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PipelineCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/IF-ID Interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_Interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/ID-EX Interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_Interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/EX-MEM Interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_Interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/MEM-WB Interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_Interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sources_1/new/PipelineCPUonBoard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PipelineCPUonBoard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sim_1/new/CPUonBoard_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPUonBoard_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12296/OneDrive/SelfLearning/Verilog/project/HUST-cpu/HUST-cpu.srcs/sim_1/new/ClockDevide_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDevide_tb

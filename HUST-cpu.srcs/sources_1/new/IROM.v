@@ -10,6 +10,6 @@ module IROM(
     assign IR = addr < cntIns ? instruction[addr] : 0;
     
     initial begin
-        $readmemh("risc-v-benchmark-ccab.mem", instruction, 0);
+        $readmemh("risc-v-int.mem", instruction, 0);
     end
 endmodule

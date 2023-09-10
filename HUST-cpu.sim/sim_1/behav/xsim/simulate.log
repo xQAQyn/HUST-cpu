@@ -215,4 +215,24 @@ IR:   8389267
 R1:00, EX_WR:08, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 1
 R2:08, EX_WR:08, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
 R1:00, MEM_WR:08, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
-R2:08, MEM_WR:08, ME
+R2:08, MEM_WR:08, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 1
+RDin: from ALU
+WE:1, WR:1f, RDin:0000000f
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   1049363
+R1:00, EX_WR:05, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:01, EX_WR:05, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:00, MEM_WR:08, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:01, MEM_WR:08, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 1
+RDin: from ALU
+WE:1, WR:08, RDin:0000xxxx
+PC:next instruction
+LEDInfo:xxxxxxxx
+IR:   4839827
+R1:13, EX_WR:06, EX_RegWrite:1, ReadR1:1, EX Conflict R1: 0
+R2:04, EX_WR:06, EX_RegWrite:1, ReadR2:0, EX Conflict R2: 0
+R1:13, MEM_WR:05, MEM_RegWrite:1, ReadR1:1, MEM Conflict R1: 0
+R2:04, MEM_WR:05, MEM_RegWrite:1, ReadR2:0, MEM Conflict R2: 0
+RDin: from ALU
+WE:1, WR:08, RDin:x0000000

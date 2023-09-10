@@ -11,7 +11,8 @@ module PipelineCPU(
     output reg halt,
     output W1,
     output W2,
-    output W3
+    output W3,
+    output reg handleInteruption
 );
 
     reg [31:0] RDin;
@@ -43,6 +44,11 @@ module PipelineCPU(
     wire WB_Jtype, WB_MemToReg, WB_RegWrite, WB_Lui, WB_Lhu;
     wire [4:0] WB_WR;
     
+    wire IntOn, IntOff, IntR, Int;
+    reg IntE, IntCLR;
+    wire [1:0] IntNo;
+    reg [31:0] IntAddr;
+    
 // IF Implement
     initial begin
         IF_PC <= 0;
@@ -52,7 +58,19 @@ module PipelineCPU(
         if(rst) begin
             IF_PC <= 0;
         end
-        else if(halt || ID_LoadUse) begin
+        else if(halt) begin
+            IF_PC <= IF_PC;
+            $display("PC:halted at %h", IF_PC);
+        end
+        else if(Int == 1'b1) begin
+            IF_PC <= IntAddr;
+            handleInteruption <= 1;
+        end
+        else if(EX_uret) begin
+            IF_PC <= EPC;
+            handleInteruption <= 0;
+        end
+        else if(ID_LoadUse) begin
             IF_PC <= IF_PC;
             $display("PC:halted at %h", IF_PC);
         end
@@ -71,7 +89,7 @@ module PipelineCPU(
     );
     
 // IF/ID interface
-    assign IF_ID_rst = JumpToBranch || rst;
+    assign IF_ID_rst = JumpToBranch || Int || EX_uret || rst;
     IF_ID_Interface IF_ID(
       .IF_PC(IF_PC),
       .IF_IR(IF_IR),
@@ -134,11 +152,10 @@ module PipelineCPU(
         .WR(WB_WR),
         .rst(rst)
     );
-    
 
 // ID/EX interface
     wire EX_rst;
-    assign EX_rst = ID_pause || JumpToBranch || rst;
+    assign EX_rst = ID_pause || EX_uret || Int || JumpToBranch || rst;
     ID_EX_Interface ID_EX(
         .ID_PC(ID_PC),
         .ID_IR(ID_IR),
@@ -268,13 +285,59 @@ module PipelineCPU(
         end
         else if(EX_ecall && !EX_equal) begin
             halt <= 1'b1;
-//            LEDInfo <= {EX_R1Control, 2'b0, EX_R2Control};//for debug
+            LEDInfo <= EX_PC;
         end
     end
     
     // handle branch
     assign BranchAddr = (EX_Jalr == 1'b1) ? ((EX_R1 + EX_Imm) & 32'hfffffffe) : (EX_PC + EX_Imm);
     assign JumpToBranch = EX_Jal == 1'b1 || EX_Jalr == 1'b1 || (EX_Bltu && EX_less) || (EX_Beq && EX_equal) || (EX_Bne && !EX_equal);
+
+    // handle interruption
+    assign IntOn = EX_uret || EX_CSRRSI;
+    assign IntOff = Int || EX_CSRRCI;
+    assign Int = !IntE && IntR;
+    always @(posedge clk) begin
+        if(rst) EPC <= 0;
+        else if(Int) begin
+            if(JumpToBranch)
+                EPC <= BranchAddr;
+            else
+                EPC <= ID_PC;
+        end
+        
+        if(rst) IntE <= 0;
+        else if(IntOn)
+            IntE <= 0;
+        else if(IntOff)
+            IntE <= 1;
+    end
+    always @(posedge clk) begin
+        if(Int == 1'b1)
+            IntCLR <= 1;
+        else IntCLR <= 0;
+    end
+    IntController IntControl(
+        .IR1(IR1),
+        .IR2(IR2),
+        .IR3(IR3),
+        .CLR(IntCLR),
+        .clk(clk),
+        .rst(rst),
+        .W1(W1),
+        .W2(W2),
+        .W3(W3),
+        .IntNo(IntNo),
+        .IntR(IntR)
+    );
+    always @(IntNo) begin
+        case (IntNo)
+            2'b01 : IntAddr <= 32'h30ac;
+            2'b10 : IntAddr <= 32'h3150;
+            2'b11 : IntAddr <= 32'h31f4;
+            default: IntAddr <= 32'h0;
+        endcase
+    end
 
 // EX/MEM interface
     wire [31:0] EX_MEM_ALUResult;

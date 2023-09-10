@@ -42,7 +42,8 @@ module PipelineCPUonBoard(
         .halt(LED[0]),
         .W1(LED[1]),
         .W2(LED[2]),
-        .W3(LED[3])
+        .W3(LED[3]),
+        .handleInteruption(LED[15])
     );
     
     LEDDisplay_32bit Display(

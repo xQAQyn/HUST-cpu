@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Sep 10 02:41:01 2023
+| Date         : Sun Sep 10 13:20:37 2023
 | Host         : DESKTOP-8RKC9IR running 64-bit major release  (build 9200)
 | Command      : report_drc -file PipelineCPUonBoard_drc_routed.rpt -pb PipelineCPUonBoard_drc_routed.pb -rpx PipelineCPUonBoard_drc_routed.rpx
 | Design       : PipelineCPUonBoard
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 13
+             Violations found: 16
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
@@ -32,6 +32,8 @@ Table of Contents
 | DPIP-1   | Warning  | Input pipelining                                    | 6          |
 | DPOP-1   | Warning  | PREG Output pipelining                              | 3          |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 3          |
+| PDRC-153 | Warning  | Gated clock check                                   | 1          |
+| PLCK-12  | Warning  | Clock Placer Checks                                 | 2          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -107,6 +109,33 @@ Related violations: <none>
 DPOP-2#3 Warning
 MREG Output pipelining  
 DSP CPU/alu/temp0__1 multiplier stage CPU/alu/temp0__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net CPU/IntControl/IntNo_reg[0]/G0 is a gated clock net sourced by a combinational pin CPU/IntControl/IntNo_reg[0]/L3_2/O, cell CPU/IntControl/IntNo_reg[0]/L3_2 (in CPU/IntControl/IntNo_reg[0] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	BTNC_IBUF_inst (IBUF.O) is locked to N17
+	BTNC_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y2
+
+Related violations: <none>
+
+PLCK-12#2 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	BTNR_IBUF_inst (IBUF.O) is locked to M17
+	BTNR_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y4
+
 Related violations: <none>
 
 
